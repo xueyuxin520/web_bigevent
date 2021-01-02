@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxMain,.boxMain1{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="boxMain" id="go_zc">112</div>
+        <div class="boxMain1" id="go_dl" style="display: none;">332</div>
+    </div>
+</body>
+<script src="./assets/lib/jquery.js"></script>
+<script>
+    $(function(){
+    $('#go_zc').on('click',function(){
+       $('.boxMain1').hide()
+       $('.zc').show()
+    })
+    $('#go_dl').on('click',function(){
+        $('.boxMain').show()
+        $('.zc').hide()
+    })
+})
+</script>
+</html>
