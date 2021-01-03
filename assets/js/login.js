@@ -14,7 +14,6 @@ $(function() {
     //从layui中获取form对象,只要导入layui就有layui对象
     var form = layui.form
     var layer = layui.layer
-    layer.msg('注册成功，请登录！')
     //通过form.verify()函数自定义校验规则
     form.verify({
         pwd: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
@@ -43,25 +42,6 @@ $(function() {
             $('#link_login').click()
         })
     })
-
-    // 监听登录表单的提交事件
-    // $('#form_login').submit(function(e){
-    //     e.preventDefault()
-    //     $.ajax({
-    //         method:'POST',
-    //         url: "http://ajax.frontend.itheima.net/api/login",
-    //         data: $(this).serialize(),
-    //         success: function (res) {
-    //             if(res.status !== 0){
-    //                 return layer.msg('登录失败')
-    //             }
-    //             layer.msg('登录成功')
-    //             // location.href='/index.html'
-    //         }
-    //     });
-    // })
-
-
      // 监听登录表单的提交事件
 //   $('#form_login').submit(function(e) {
 //     // 阻止默认提交行为
